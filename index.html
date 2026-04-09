@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPM Dialer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2ECC71, #27AE60);
+            color: white;
+            text-align: center;
+            padding-top: 60px;
+        }
+        .container {
+            background: white;
+            color: black;
+            padding: 25px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 350px;
+            margin: auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        h1 {
+            margin-bottom: 15px;
+        }
+        input {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            background: #2ECC71;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #27AE60;
+        }
+        .footer {
+            margin-top: 10px;
+            font-size: 12px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>📞 PPM Dialer</h1>
+        <input type="tel" id="number" placeholder="Enter phone number">
+        <button onclick="makeCall()">Call Now</button>
+        <div class="footer">Developed by PPM</div>
+    </div>
+
+    <script>
+        function makeCall() {
+            let number = document.getElementById("number").value.trim();
+            if (number === "") {
+                alert("Please enter a phone number");
+                return;
+            }
+            window.location.href = "tel:" + number;
+        }
+    </script>
+
+</body>
+</html>
